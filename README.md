@@ -32,6 +32,7 @@ From this I discerned 2 nouns to set my classes accordingly:
 **Statement** - to store transactions
 I would also add a main class to pen these 2 classes...
 **Bank** - I decided to be the "god" file to interact with the two classes above. And was the LAST class I incorporated
+**DateClass** - a last minute refactor into its own class, too nervous to call it just Date and mess with the base class that comes with Javascript
 
 ## my class interaction
 
@@ -56,4 +57,6 @@ Statement's functions:
 My process led me to 3 classes all in all. And the program seems pretty clean Some things I'm dubious about include:
 - Should my statement printing be done on the main bank class?
 - Could my getDate() be elsewhere? In another class even?
-- I think that the date, though you can enter it in whatever way you want
+- I think that the date, though you can enter it in whatever way you want, is limited to the d/m/yyyy format whenever it is called upon as default, unlike what you see in the acceptance criteria, hopefully not an issue.
+
+My process was enjoyable. Everything happened sequentially, including a last minute refactor to create a DateClass class. My doubles/mocking/stubbing with Javascript needs work. And I definitely need to remind myselfnot to rush ahead with TDD.
