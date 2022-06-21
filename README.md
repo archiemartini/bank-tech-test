@@ -1,15 +1,19 @@
-# Bank tech test
+# bank tech test
 
-## Instructions for use
+## instructions for use
 
 - clone this repository to your local machine
 - run `npm install`
 - load 'nodetest.js' in node to set up a feature test
+- test with `jest`
 
 The programme allows you to deposit/withdraw from the bank class. For testing purposes you can enter a date in this format 'dd/mm/yyyy', as a second argument after the deposit/withdrawal amount. Otherwise the argument will default and call the date today.
 
+## in action
 
-### Acceptance criteria
+![walkthrough](./readme-screenshot.png)
+
+### acceptance criteria
 
 here is the acceptance criteria from bank_tech_test.md 
 
@@ -59,4 +63,4 @@ My process led me to 3 classes all in all. And the program seems pretty clean So
 - Could my getDate() be elsewhere? In another class even?
 - I think that the date, though you can enter it in whatever way you want, is limited to the d/m/yyyy format whenever it is called upon as default, unlike what you see in the acceptance criteria, hopefully not an issue.
 
-My process was enjoyable. Everything happened sequentially, including a last minute refactor to create a DateClass class. My doubles/mocking/stubbing with Javascript needs work. And I definitely need to remind myselfnot to rush ahead with TDD.
+My process was enjoyable. Everything happened sequentially, including a last minute refactor to create a DateClass class. My doubles/mocking/stubbing with Javascript needs work. And I definitely need to remind myself not to rush ahead with TDD.
