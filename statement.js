@@ -11,6 +11,9 @@ class Statement {
       balance: newbalance
     })
   }
+  sendTransactions() {
+    return this.transactions
+  }
 }
 
 module.exports = Statement;
