@@ -1,29 +1,32 @@
+const DateClass = require('./dateclass')
+const Account = require('./account')
+
 class Bank {
 
-  constructor(account) {
-    this.account = account
+  constructor(account, date) {
+    this.account = account || new Account()
+    this.date = date || new DateClass()
   }
 
   getBalance() {
-    return this.account.sendBalance()
-  }
+    return this.account.sendBalance();
+  };
 
-  deposit(amount, date = this.getDate()) {
-    this.account.addMoney(amount, date)
-  }
+  deposit(amount, date = this.date.getDate()) {
+    this.account.addMoney(amount, date);
+  };
 
-  withdraw(amount, date = this.getDate()) {
-    this.account.subtractMoney(amount, date)
-  }
+  withdraw(amount, date = this.date.getDate()) {
+    this.account.subtractMoney(amount, date);
+  };
   
-
+  printStatement() {
+    console.log('date || credit || debit || balance')
+    this.account.getStatement().forEach((object) => {
+      console.log(`${object.date} || ${object.debit} || ${object.balance}`);
+    });
+  };
   
-  getDate() {
-    let date = new Date()
-    let uk_format = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`
-    return uk_format
-  }
-
 }
 
 module.exports = Bank;

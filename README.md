@@ -6,6 +6,8 @@
 - run `npm install`
 - load 'nodetest.js' in node to set up a feature test
 
+The programme allows you to deposit/withdraw from the bank class. For testing purposes you can enter a date in this format 'dd/mm/yyyy', as a second argument after the deposit/withdrawal amount. Otherwise the argument will default and call the date today.
+
 
 ### Acceptance criteria
 
@@ -50,3 +52,8 @@ Statement's functions:
 - addTransaction() [pushs into transactions]
 - sendTransactions() [to interact with Account's getStatement()]
 
+## process
+My process led me to 3 classes all in all. And the program seems pretty clean Some things I'm dubious about include:
+- Should my statement printing be done on the main bank class?
+- Could my getDate() be elsewhere? In another class even?
+- I think that the date, though you can enter it in whatever way you want
