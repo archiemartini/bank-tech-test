@@ -36,8 +36,5 @@ describe('Account class', () => {
     expect(account.getStatement()).toEqual([{date: '11/5/2022', debit: 500, balance: 1500}])
   })
 
-  it('can get a uk format date', () => {
-    account = new Account()
-    expect(account.getDate()).toMatch(/^(0?[1-9]|[12][0-9]|3[01])[- /.](0?[1-9]|1[012])[- /.](19|20)\d\d$/)
-  })
+  
 })

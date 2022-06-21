@@ -6,23 +6,22 @@ class Account {
     this.statement = statement || new Statement()
   }
 
-  addMoney(amount, date = this.getDate()) {
+  addMoney(amount, date) {
     this.balance += amount
     this.statement.addTransaction(date, amount, this.balance)
   }
 
-  subtractMoney(amount) {
+  subtractMoney(amount, date) {
     this.balance -= amount
+    this.statement.addTransaction(date, amount, this.balance)
+  }
+
+  sendBalance() {
+    return `£${this.balance}`
   }
 
   getStatement() {
     return this.statement.sendTransactions()
-  }
-
-  getDate() {
-    let date = new Date()
-    let uk_date = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}`
-    return uk_date
   }
 
 }
