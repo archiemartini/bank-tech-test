@@ -1,4 +1,4 @@
-const Statement = require('../statement')
+const Statement = require('../lib/statement')
 
 describe('Statement class', () => {
 
@@ -21,7 +21,7 @@ describe('Statement class', () => {
 
   it('can return its transactions', () => {
     statement.addTransaction('11/05/23', 500, 1500);
-    expect(statement.sendTransactions()).toEqual([{balance: 1500, date: "11/05/23", debit: 500}]);
+    expect(statement.transactions).toEqual([{balance: 1500, date: "11/05/23", debit: 500}]);
   })
   
 })

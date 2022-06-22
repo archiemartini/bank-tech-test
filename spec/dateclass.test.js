@@ -1,4 +1,4 @@
-const DateClass = require('../dateclass')
+const DateClass = require('../lib/dateclass')
 
 describe('Date Class', () => {
   

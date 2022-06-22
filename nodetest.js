@@ -1,3 +1,5 @@
-const Statement = require('./statement')
-const Account = require('./account')
-const Bank = require('./bank')
+const Statement = require('./lib/statement')
+const BankAccount = require('./lib/bank')
+
+statement = new Statement()
+bank = new BankAccount(statement)
