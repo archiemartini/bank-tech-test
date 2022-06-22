@@ -25,8 +25,11 @@ describe('Bank class', () => {
     expect(bank.getBalance()).toEqual('£300.00');
   });
 
-  it('can print a bank statement', () => {
-    expect(bank.getStatement()).toEqual(console.log('date || credit || debit || balance'));
+  it('can print a bank statement that contains the transactions in reverse chronological order', () => {
+    bank.deposit(500, '11/05/2022')
+    bank.deposit(250, '13/05/2022')
+    expect(bank.getStatement()).toEqual(console.log('date || credit || debit || balance'))
+                                        
   });
 
 })
