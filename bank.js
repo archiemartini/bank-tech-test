@@ -13,11 +13,11 @@ class Bank {
   };
 
   deposit(amount, date = this.date.getDate()) {
-    this.account.addMoney(amount, date);
+    this.account.addMoney(amount.toFixed(2), date);
   };
 
   withdraw(amount, date = this.date.getDate()) {
-    this.account.subtractMoney(amount, date);
+    this.account.subtractMoney(amount.toFixed(2), date);
   };
   
   printStatement() {
