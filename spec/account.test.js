@@ -1,3 +1,4 @@
+/* eslint-ignore */
 const Account = require('../account');
 const Statement = require('../statement');
 
