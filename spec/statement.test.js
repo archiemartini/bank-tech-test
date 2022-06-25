@@ -7,6 +7,8 @@ describe('Statement class', () => {
   let statement;
   beforeEach(function () {
     statement = new Statement()
+
+    global.console.log.mockClear()
   })
 
   it('initializes with an empty transactions array', () => {
@@ -31,9 +33,14 @@ describe('Statement class', () => {
     statement.addWithdrawalTransaction('13/05/23', 250, 500)
     statement.printStatement()
     expect(console.log).toBeCalledTimes(3)
-    expect(console.log).toHaveBeenCalledWith('date || credit || debit || balance')
-    expect(console.log).toHaveBeenCalledWith("13/05/23 || || 250 || 500")
-    expect(console.log).toHaveBeenCalledWith("11/05/23 || 750 || || 750")
+    expect(console.log.mock.calls[0][0]).toEqual('date || credit || debit || balance')
+    expect(console.log.mock.calls[1][0]).toEqual("13/05/23 || || 250 || 500")
+    expect(console.log.mock.calls[2][0]).toEqual("11/05/23 || 750 || || 750")
+  })
+
+  it('console', () => {
+    console.log('hiya')
+    expect(console.log).toBeCalledTimes(1)
   })
   
 })
