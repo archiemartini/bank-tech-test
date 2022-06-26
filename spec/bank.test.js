@@ -24,11 +24,12 @@ describe('Bank class', () => {
   });
 
   it('can make a withdrawal', () => {
-    bank.deposit(500);
-    bank.withdraw(200);
-    
+    bank.deposit(500,'11/05/2022');
+    bank.withdraw(200, '12/05/2022');
+
     expect(mockStatement.addDepositTransaction).toHaveBeenCalledTimes(1)
     expect(mockStatement.addWithdrawalTransaction).toHaveBeenCalledTimes(1)
+    expect(mockStatement.addWithdrawalTransaction).toHaveBeenCalledWith('12/05/2022', '200.00', '300.00')
     expect(bank.getBalance()).toEqual('£300.00');
   });
 
