@@ -6,7 +6,6 @@ jest.mock('../lib/statement')
 
 describe('Bank class', () => {
 
-  
   beforeEach(function () {
     mockStatement = new Statement();
     bank = new BankAccount(mockStatement);
@@ -14,7 +13,6 @@ describe('Bank class', () => {
     
     Statement.mockClear()
   });
-
   
   it('can make a deposit', () => {
     mockStatement.addDepositTransaction = jest.fn()

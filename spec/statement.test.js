@@ -15,7 +15,6 @@ describe('Statement class', () => {
     expect(statement.transactions).toEqual([]);
   })
 
-
   it('can add a new transaction string to the array', () => {
     statement.addDepositTransaction('11/05/23', 500, 1500);
     expect(statement.transactions).toEqual(["11/05/23 || 500 || || 1500"]);
